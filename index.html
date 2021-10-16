@@ -3,37 +3,53 @@
   <head>
     <title>Jane Bessonova</title>
     <style>
+      @font-face {
+        font-family: DrukTextWide-Heavy;
+        src: url("DrukTextWide-Heavy.otf") format("opentype");
+      }
+      @font-face {
+        font-family: DrukTextWide-Medium;
+        src: url("DrukTextWide-Medium.otf") format("opentype");
+      }
+
       body {
         background-color: black;
         color: #ffffff;
-        font-size: 23px;
+        font-size: 18px;
         margin: 0px;
+        line-height: 25px;
+        font-family: 'DrukTextWide-Medium';
       }
+
+      .page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       p {
         margin: 0px;
       }
 
-      h1 {
-        font-size: 150px;
-        margin: 0px;
+      h2 {
+        line-height: 44px;
+        font-family: 'DrukTextWide-Heavy';
+        font-size: 34px;
       }
-
-      h2,
-      .works a {
-        font-size: 40px;
-      }
+      
       h3 {
-        font-size: 23px;
-        color: gray;
+        font-size: 18px;
         font-weight: normal;
+        color: gray;
         margin: 0px;
         padding-top: 50px;
         padding-bottom: 17px;
       }
 
       .topnav {
-        padding-top: 30px;
-        padding-left: 80px;
+        padding-left: 60px;
+        padding-top: 58px;
+        padding-bottom: 80px;
         overflow: hidden;
       }
 
@@ -41,7 +57,7 @@
         float: left;
         color: gray;
         text-align: center;
-        padding: 40px;
+        padding-right: 44px;
       }
 
       a {
@@ -50,8 +66,9 @@
 
       hr {
         border: 1px solid gray;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        opacity: 40%;
+        margin-top: 32px;
+        margin-bottom: 32px;
       }
 
       .facebook a:hover,
@@ -91,22 +108,34 @@
         content: "watch";
       }
 
-      .main-container,
-      .inner-container {
-        padding-top: 70px;
+      .main-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: inline-block;
+      }
+  
+      @media only screen and (max-width: 992px) {
+        .main-container {
+          padding-left: 350px;
+         }
+
+        h2 {
+          font-size: 32px;
+        }
+      }
+
+      .main-content, .inner-container {
         display: flex;
       }
 
       .child-container {
         flex: 1;
-        padding: 20px;
       }
       .child-container.left {
-        padding-left: 120px;
+        padding-right: 90px;
       }
       .child-container.right {
-        padding-top: 80px;
-        padding-right: 170px;
+        padding-right: 90px;
       }
 
       .child-inner-container {
@@ -114,74 +143,78 @@
         color: gray;
       }
       .child-inner-container.rigth {
-        padding-right: 250px;
+        padding-right: 90px;
+        width: 345px;
       }
+
       .child-inner-container p {
         padding-left: 45px;
       }
 
       .works {
-        padding-top: 90px;
-        padding-left: 120px;
-        padding-right: 500px;
+        padding-top: 195px;
+        padding-left: 60px;
+        padding-right: 275px;
         color: gray;
       }
 
       .works a {
-        font-weight: bold;
+        font-family: 'DrukTextWide-Medium';
+        font-size: 50px;
+        line-height: 50px;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <div class="topnav">
-      <div class="behance"><a href="https://www.behance.net/JaneBessonova" target="_blank"> behance </a></div>
-      <div class="facebook"><a href="https://www.facebook.com/evgeniya.bessonova.5" target="_blank"> facebook </a></div>
-      <div class="instagram"><a href="https://www.instagram.com/llittle.jane" target="_blank"> instagram </a></div>
-      <div class="hh"><a href="https://hh.ru" target="_blank"> CV </a></div>
-    </div>
-    <div class="main-container">
-      <div class="child-container left">
-        <h1>
-          <p style="color: #fd0079;">Hi!</p>
-          <p style="color: #fbff00;">I'm</p>
-          <p style="color: #5bff62;">Jane</p>
-        </h1>
-      </div>
-      <div class="child-container right">
-        <h2>
-          <p>I'm a designer</p>
-          <p>I design aesthetically</p>
-          <p>pleasing and user-</p>
-          <p>friendly interfaces for</p>
-          <p>websites, web services</p>
-          <p>and applications</p>
-        </h2>
-        <div class="inner-container">
-          <div class="child-inner-container left">
-            <h3>hard skills</h3>
-            <p>research</p>
-            <p>ux/ui</p>
-            <p>creative</p>
+    <div class="page">
+      <div class="main-container">
+        <div class="topnav">
+          <div class="behance"><a href="https://www.behance.net/JaneBessonova" target="_blank"> behance </a></div>
+          <div class="facebook"><a href="https://www.facebook.com/evgeniya.bessonova.5" target="_blank"> facebook </a></div>
+          <div class="instagram"><a href="https://www.instagram.com/llittle.jane" target="_blank"> instagram </a></div>
+          <div class="hh"><a href="https://hh.ru" target="_blank"> CV </a></div>
+        </div>
+        <div class="main-content">
+          <div class="child-container left">
+            <img src="im_jane.svg" >
           </div>
-          <div class="child-inner-container rigth">
-            <h3>soft skills</h3>
-            <p>teamwork</p>
-            <p>self-organisation</p>
-            <p>analyticity</p>
-            <p>logic</p>
+          <div class="child-container right">
+            <h2>
+              <p>I'm a designer</p>
+              <p>I design aesthetically</p>
+              <p>pleasing and user-</p>
+              <p>friendly interfaces for</p>
+              <p>websites, web services</p>
+              <p>and applications</p>
+            </h2>
+            <div class="inner-container">
+              <div class="child-inner-container left">
+                <h3>hard skills</h3>
+                <p>research</p>
+                <p>ux/ui</p>
+                <p>creative</p>
+              </div>
+              <div class="child-inner-container rigth">
+                <h3>soft skills</h3>
+                <p>teamwork</p>
+                <p>self-organisation</p>
+                <p>analyticity</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="works">
+          <p>works</p>
+          <hr />
+          <div class="viju"><a href="https://www.viju.ru" target="_blank"> </a></div>
+          <hr />
+          <div class="freshauto"><a href="https://www.freshauto.ru" target="_blank"> </a></div>
+          <hr />
+          <div class="otherworks"><a href="https://www.behance.net/JaneBessonova" target="_blank"> </a></div>
+          <hr />
+        </div>
       </div>
-    </div>
-    <div class="works">
-      <p>works</p>
-      <hr />
-      <div class="viju"><a href="https://www.viju.ru" target="_blank"> </a></div>
-      <hr />
-      <div class="freshauto"><a href="https://www.freshauto.ru" target="_blank"> </a></div>
-      <hr />
-      <div class="otherworks"><a href="https://www.behance.net/JaneBessonova" target="_blank"> </a></div>
-      <hr />
     </div>
   </body>
 </html>
