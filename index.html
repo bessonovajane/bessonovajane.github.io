@@ -3,6 +3,7 @@
   <head>
     <title>Jane Bessonova</title>
     <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width">
     <style>
       @font-face {
         font-family: DrukTextWide-Heavy;
@@ -13,34 +14,118 @@
         src: url("DrukTextWide-Medium.otf") format("opentype");
       }
 
+      @media only screen and (min-width: 992px) {
+        .page {
+          width: 1350px;
+          margin: 0px auto;
+          padding-right: 10px;
+          padding-left: 130px;
+        }
+
+        .child-container.right h2 {
+          line-height: 44px;
+          font-family: 'DrukTextWide-Heavy';
+          font-size: 34px;
+        }
+
+        body, h3 {
+          font-size: 18px;
+        }
+
+        .child-container.left {
+          padding-right: 90px;
+        }
+
+        .child-container.right {
+          padding-right: 90px;
+        }
+
+        .works {
+          padding-top: 150px;
+        }
+
+        .topnav {
+          padding-top: 58px;
+        }
+
+        .works a {
+          line-height: 50px;
+          font-size: 50px;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        .main-content {
+          flex-direction: column;
+        }
+
+        .page {
+          padding-right: 20px;
+          padding-left: 80px;
+        }
+        .child-container {
+          align-items: center;
+        }
+
+        .child-container.left img {
+          width: 1000px;
+        }
+
+        .child-container.left {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+
+        .child-container.right h2, .works a {
+          font-size: 46pt;
+          line-height: 74px;
+        }
+
+        .works {
+          padding-top: 250px;
+        }
+
+        body, h3 {
+          font-size: 28pt;
+        }
+
+        .inner-container {
+          line-height: 50px;
+        }
+
+        .topnav {
+          padding-top: 120px;
+        }
+      }
 
       body {
+        min-width: 1170px;
         background-color: black;
         color: #ffffff;
-        font-size: 18px;
         margin: 0px;
         line-height: 25px;
         font-family: 'DrukTextWide-Medium';
       }
 
-      .page {
+      .main-content, .inner-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+
+      .child-container.left {
+        width: 170px;
+      }
+
+      .works {
+        padding-right: 140px;
+        padding-bottom: 130px;
+        color: gray;
       }
 
       p {
         margin: 0px;
       }
 
-      h2 {
-        line-height: 44px;
-        font-family: 'DrukTextWide-Heavy';
-        font-size: 34px;
-      }
-      
       h3 {
-        font-size: 18px;
         font-weight: normal;
         color: gray;
         margin: 0px;
@@ -49,10 +134,9 @@
       }
 
       .topnav {
-        padding-left: 60px;
-        padding-top: 58px;
         padding-bottom: 80px;
         overflow: hidden;
+        text-align: center;
       }
 
       .topnav a {
@@ -113,34 +197,8 @@
         content: "watch";
       }
 
-      .main-container {
-        padding-left: 20px;
-        padding-right: 20px;
-        display: inline-block;
-      }
-  
-      @media only screen and (max-width: 992px) {
-        .main-container {
-          padding-left: 340px;
-         }
-
-        h2 {
-          font-size: 28px;
-        }
-      }
-
-      .main-content, .inner-container {
-        display: flex;
-      }
-
       .child-container {
         flex: 1;
-      }
-      .child-container.left {
-        padding-right: 90px;
-      }
-      .child-container.right {
-        padding-right: 90px;
       }
 
       .child-inner-container {
@@ -156,18 +214,8 @@
         padding-left: 45px;
       }
 
-      .works {
-        padding-top: 195px;
-        padding-bottom: 130px;
-        padding-left: 60px;
-        padding-right: 275px;
-        color: gray;
-      }
-
       .works a {
         font-family: 'DrukTextWide-Medium';
-        font-size: 50px;
-        line-height: 50px;
         color: white;
       }
     </style>
